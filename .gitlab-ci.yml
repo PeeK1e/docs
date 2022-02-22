@@ -3,8 +3,9 @@ image: docker.io/peek1e/mkdocs-image
 pages:
   script:
     - mkdocs build
+    - mv site public
   artifacts:
     paths:
-      - site
+      - public
   only:
     - main
