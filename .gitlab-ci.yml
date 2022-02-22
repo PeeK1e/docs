@@ -1,6 +1,15 @@
-image: docker.io/peek1e/mkdocs-image
+variables:
+  IMAGE_NAME: mkdocs-image
+  DOCKER_TLS_CERTDIR: ""
+
+
+stages:
+  - deploy
+  - docker-prepare
 
 pages:
+  image: docker.io/peek1e/mkdocs-image
+  stage: deploy
   script:
     - mkdocs build
     - mv site public
@@ -9,3 +18,18 @@ pages:
       - public
   only:
     - main
+
+docker-build:
+  services:
+    - docker:dind
+  stage: docker-prepare
+  script:
+    - echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
+    - docker build -t docker.io/$DOCKER_USER/$IMAGE_NAME
+    - docker push docker.io/$DOCKER_USER/$IMAGE_NAME
+  only:
+    refs:
+      - main
+    changes:
+      - Dockerfile
+    
