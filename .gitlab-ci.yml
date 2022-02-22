@@ -7,9 +7,6 @@ stages:
   - docker-prepare
   - deploy
 
-before_script:
-  - docker pull docker.io/$DOCKER_USER/$IMAGE_NAME
-
 pages:
   image: docker.io/peek1e/mkdocs-image
   stage: deploy
@@ -29,7 +26,7 @@ docker-build:
   stage: docker-prepare
   script:
     - echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
-    - docker build --cache-from "docker.io/$DOCKER_USER/$IMAGE_NAME" -t "docker.io/$DOCKER_USER/$IMAGE_NAME" .
+    - docker build -t docker.io/$DOCKER_USER/$IMAGE_NAME .
     - docker push docker.io/$DOCKER_USER/$IMAGE_NAME
   only:
     refs:
