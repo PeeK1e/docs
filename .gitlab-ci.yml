@@ -29,7 +29,7 @@ docker-build:
   stage: docker-prepare
   script:
     - echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
-    - docker build --cache-from docker.io/$DOCKER_USER/$IMAGE_NAME -t docker.io/$DOCKER_USER/$IMAGE_NAME .
+    - docker build --cache-from "docker.io/$DOCKER_USER/$IMAGE_NAME" -t "docker.io/$DOCKER_USER/$IMAGE_NAME" .
     - docker push docker.io/$DOCKER_USER/$IMAGE_NAME
   only:
     refs:
