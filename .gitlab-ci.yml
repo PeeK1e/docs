@@ -4,8 +4,8 @@ variables:
 
 
 stages:
-  - deploy
   - docker-prepare
+  - deploy
 
 pages:
   image: docker.io/peek1e/mkdocs-image
