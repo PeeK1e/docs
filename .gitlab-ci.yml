@@ -1,16 +1,18 @@
-include:
-  template: Dependency-Scanning.gitlab-ci.yml
-
-image: docker:latest
+image: docker.io/peek1e/mkdocs-image
 
 services:
   - docker:dind
 
+stages:
+  - deploy
+
 pages:
+  stage: deploy
   script:
-    - docker run -v "$(pwd):/srv/mkdocs" registry.gitlab.com/lramage/mkdocs-ci-pipeline:latest
+    - cp . .
+    - mkdocks build
   artifacts:
     paths:
-      - public
+      - site
   only:
     - main
