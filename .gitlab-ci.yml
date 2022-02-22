@@ -1,0 +1,16 @@
+include:
+  template: Dependency-Scanning.gitlab-ci.yml
+
+image: docker:latest
+
+services:
+  - docker:dind
+
+pages:
+  script:
+    - docker run -v "$(pwd):/srv/mkdocs" registry.gitlab.com/lramage/mkdocs-ci-pipeline:latest
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
