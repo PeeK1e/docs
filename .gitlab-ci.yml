@@ -1,16 +1,8 @@
 image: docker.io/peek1e/mkdocs-image
 
-services:
-  - docker:dind
-
-stages:
-  - deploy
-
 pages:
-  stage: deploy
   script:
     - mkdocs build
-    - mv $(pwd)/site /site
   artifacts:
     paths:
       - site
