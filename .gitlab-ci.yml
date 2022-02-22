@@ -10,6 +10,7 @@ pages:
   stage: deploy
   script:
     - mkdocs build
+    - mv $(pwd)/site /site
   artifacts:
     paths:
       - site
