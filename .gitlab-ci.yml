@@ -9,7 +9,7 @@ stages:
 pages:
   stage: deploy
   script:
-    - mkdocks build
+    - mkdocs build
   artifacts:
     paths:
       - site
