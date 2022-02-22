@@ -1,3 +1,6 @@
+---
+title: Home
+---
 ## Welcome
 
 These Docs are a collection of stuff and problems I've encountered over time related to Linux, Kubernetes, Ansible and much more.
