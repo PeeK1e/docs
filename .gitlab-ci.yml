@@ -9,7 +9,6 @@ stages:
 pages:
   stage: deploy
   script:
-    - cp . .
     - mkdocks build
   artifacts:
     paths:
