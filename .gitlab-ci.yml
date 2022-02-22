@@ -18,6 +18,11 @@ pages:
       - public
   only:
     - main
+  except:
+    refs:
+      - main
+    changes:
+      - Dockerfile
 
 docker-build:
   image: docker
