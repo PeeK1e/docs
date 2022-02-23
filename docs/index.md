@@ -5,6 +5,10 @@ title: Home
 
 These Docs are a collection of stuff and problems I've encountered over time related to Linux, Kubernetes, Ansible and much more.
 
+## Contributing
+
+Feel free to open a Merge Request for any changes, improvements and additions.
+
 ***
 
 <center>
