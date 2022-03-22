@@ -16,7 +16,7 @@ _JAVA_AWT_WM_NONREPARENTING=1
 ### Firefox in Wayland Mode
 
 !!! Warning
-Toolbars like bookmarks are [broken on the native Wayland version of Firefox](https://www.reddit.com/r/swaywm/comments/rov776/comment/hqeftnw/?utm_source=share&utm_medium=web2x&context=3)
+    Toolbars like bookmarks are [broken on the native Wayland version of Firefox](https://www.reddit.com/r/swaywm/comments/rov776/comment/hqeftnw/?utm_source=share&utm_medium=web2x&context=3)
 ```
 MOZ_ENABLE_WAYLAND=1
 ```
