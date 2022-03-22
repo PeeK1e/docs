@@ -10,7 +10,7 @@ RUN \
   python3-dev \
   py3-pip \
   lftp \
-  build-base && 
+  build-base
   
 RUN \
   pip install --upgrade pip && \
