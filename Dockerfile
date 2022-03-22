@@ -10,7 +10,9 @@ RUN \
   python3-dev \
   py3-pip \
   lftp \
-  build-base && \
+  build-base && 
+  
+RUN \
   pip install --upgrade pip && \
   pip install mkdocs && \
   pip install mkdocs-minify-plugin && \
