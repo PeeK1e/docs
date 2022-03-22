@@ -19,6 +19,10 @@ theme:
         - search.share
         - search.suggest
         - tabs
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 plugins:
     - minify:
         minify_html: true
