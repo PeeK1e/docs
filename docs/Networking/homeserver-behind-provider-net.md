@@ -6,7 +6,8 @@ If you have a homeserver behind a provider NAT or a Firewall you have the option
 You can also use a VPN for that but personally I found it more simple to just use SSH reverse port forwarding.
 
 * Place your SSH key onto the target machine
-* Create a conjob that executes automatically on boot of your Homeserver/Server behind the NAT/Firewall like follows
+* Create a conjob that executes automatically on boot of your Homeserver/Server behind the NAT/Firewall as follows
+
 ```
 @reboot autossh -M 0 -o ConnectTimeout=10 -o ServerAliveInterval=120 -o ServerAliveCountMax=2 \
 -p <ssh_port> -i </your/ssh/key> \

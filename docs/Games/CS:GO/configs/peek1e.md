@@ -3,11 +3,13 @@ title: PeeK1e's Config
 ---
 
 startup options
+
 ```
 gamemoderun %command% -fullscreen -nojoy -novid +exec my_config.cfg -threads 12 -high
 ```
 
 autostart.cfg
+
 ```
 net_graph "1"
 
