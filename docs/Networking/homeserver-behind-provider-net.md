@@ -2,7 +2,7 @@
 title: Homeserver behind provider NAT/Firewall
 ---
 
-If you have a homeserver behind a provider NAT or a Firewall you have the option to rent a small droplet or vServer ans reverse ssh the ports you need to forward.
+If you have a homeserver behind a provider NAT or a firewall you have the option to rent a small vServer and reverse-ssh the ports you need to have exposed.
 You can also use a VPN for that but personally I found it more simple to just use SSH reverse port forwarding.
 
 * Place your SSH key onto the target machine
