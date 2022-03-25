@@ -11,7 +11,7 @@ If you are using a window manager like `sway` there are a couple of packages you
 For Arch based systems these packages are usefull.
 
 * `xdg-desktop-portal`
-* `xdg-desktop-portal-wlr`, `wlroots` (Wayland Compositors like Sway)
+* `xdg-desktop-portal-wlr` and `wlroots` (Wayland Compositors like Sway)
 * `xdg-desktop-portal-kde` (KDE)
 * `xdg-desktop-portal-gnome` (Gnome)
 * `slurp`
@@ -19,10 +19,12 @@ For Arch based systems these packages are usefull.
 * `xorg-xwayland` (to run xorg-based applications)
 
 To enable wayland mode for electron apps create a `~/.config/electron12-flags.conf` with the following content:
+
 ```
 --enable-features=UseOzonePlatform
 --ozone-platform=wayland
 ```
+
 and link to enable it for older electron apps aswell
 
 ```
