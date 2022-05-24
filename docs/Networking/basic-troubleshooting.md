@@ -81,6 +81,8 @@ $ echo "test" | netcat -c <ip> <port>
 $ echo "test" | netcat -cu <ip> <port>
 ```
 
+After you have sent the packet, you should see the `test` message on the listening host.
+
 ### Firewall or Intelligent-Switches
 
 If all the previous checks fail, check your host-machine's firewall rules and firewall helper like `ufw`
