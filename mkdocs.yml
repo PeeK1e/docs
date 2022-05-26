@@ -3,7 +3,7 @@ site_url: 'https://docs.peek1e.eu'
 repo_url: https://gitlab.com/PeeK1e/docs
 edit_uri: '-/edit/main/docs/'
 site_author: Daniel Lehmann
-site_description: "docs, tips and tricks"
+site_description: "docs, tipps and tricks"
 theme:
     name: material
     locale: en
