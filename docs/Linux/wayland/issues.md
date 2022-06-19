@@ -6,7 +6,7 @@ title: Wayland Issues
 Some applications need to be told that they are running on Wayland
 
 ### Java Applications 
-are [alergic to wayland](https://wiki.archlinux.org/title/Wayland#Java) and need to have reparenting windows disabled
+are [allergic to wayland](https://wiki.archlinux.org/title/Wayland#Java) and need to have reparenting windows disabled
 
 You can set this value in your `/etc/environment`
 

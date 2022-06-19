@@ -26,4 +26,5 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi
 ```
 
-**Hint** you may want to kill the `gnome-keyring-daemon` on logout, so there wont be any issues on the next login.
+!!! Hint 
+	you may want to kill the `gnome-keyring-daemon` on logout, so there won't be any issues on the next login.
