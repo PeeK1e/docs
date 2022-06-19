@@ -2,7 +2,7 @@
 title: Why can't I run Xwayland apps as root
 ---
 
-When launching **GUI**-Apps made for X11 on wayland as root you may see an error like this
+When launching **GUI**-Apps made for X11 on wayland as root you may see an error like this:
 
 ```sh
 Invalid MIT-MAGIC-COOKIE-1 key
@@ -12,7 +12,8 @@ java.awt.AWTError: Can't connect to X11 window server using ':0' as the value of
 This is due to Wayland's security policy and design.
 According to Wayland, apps requiring root privileges should use [Polkit](https://wiki.archlinux.org/title/Polkit) to acquire those.
 
-But there is a workaround for situations where apps simply need to be run as root:
+
+Since we know that Software always is perfectly written, there is a workaround for situations where apps simply need to be run as root:
 
 ```sh
 #sets the permission to launch apps as root
@@ -21,4 +22,4 @@ xhost si:localuser:root
 sudo -E <app>
 ```
 
-Removin the permissions after you're done is done by `xhost -si:localuser:root`.
+Removing the permissions after you're done is done by `$ xhost -si:localuser:root`.
