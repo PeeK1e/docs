@@ -3,12 +3,25 @@ title: Unlocking SSH keys on login
 ---
 # Keyring unlocking
 
-In order to unlock your keyring on login, to use SSH keys and other keys without entering passwords everytime, you'll need to install a keyring manager like gnome-keyring.
+In order to unlock your keyring on login, to use SSH keys and other keys without entering passwords everytime, you'll need to install a keyring manager like `gnome-keyring`.
 
-For the modules to automatically load, add these lines to your `/etc/pam.d/login`
+If you use `gnome-keyring` and for the modules to automatically load, add these lines to your `/etc/pam.d/login`
 
+```conf
+auth       optional     pam_gnome_keyring.so
+session    optional     pam_gnome_keyring.so auto_start
 ```
-auth       optional	pam_gnome_keyring.so
+The file should look something like this afterwards
+```conf
+#%PAM-1.0
+
+auth       required     pam_securetty.so
+auth       requisite    pam_nologin.so
+auth       include      system-local-login
+auth       optional     pam_gnome_keyring.so
+account    include      system-local-login
+session    include      system-local-login
+password   include      system-local-login
 session    optional     pam_gnome_keyring.so auto_start
 ```
 
